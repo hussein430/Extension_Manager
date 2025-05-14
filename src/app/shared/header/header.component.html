@@ -1,0 +1,10 @@
+<header class="mt-5 p-3 shadow-2xl rounded-2xl header">
+  <nav class="flex justify-between items-center">
+    <div class="logo">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="theme p-2 cursor-pointer border rounded-xl theme-icon" (click)="toggleTheme()">
+      <img [src]="isDark? 'images/icon-sun.svg': 'images/icon-moon.svg' " alt="theme-icon">
+    </div>
+  </nav>
+</header>
