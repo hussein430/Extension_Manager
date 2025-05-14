@@ -1,0 +1,42 @@
+  <div class="grid mt-10 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      *ngFor="let extension of extensions; let i = index"
+      class="rounded-xl bg-neutral-800 text-white p-4 shadow-md flex flex-col justify-between"
+    >
+      <!-- Top: Logo & Info -->
+      <div class="flex items-start gap-3">
+        <img [src]="extension.logo" [alt]="extension.name" class="w-10 h-10" />
+        <div>
+          <h3 class="text-lg font-semibold">{{ extension.name }}</h3>
+          <p class="text-sm text-neutral-300">{{ extension.description }}</p>
+        </div>
+      </div>
+
+      <!-- Bottom: Remove & Toggle -->
+      <div class="mt-4 flex justify-between items-center">
+        <button
+          class="text-sm px-4 py-1 rounded bg-red-600 hover:bg-red-700 text-white"
+          (click)="removeExtension(i)"
+        >
+          Remove
+        </button>
+
+        <!-- Toggle -->
+        <label class="inline-flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            class="sr-only peer"
+            [checked]="extension.isActive"
+            (change)="toggleStatus(extension)"
+          />
+          <div
+            class="w-11 h-6 bg-gray-400 rounded-full peer peer-checked:bg-green-500 relative transition-all"
+          >
+            <div
+              class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-all peer-checked:translate-x-5"
+            ></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>

@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { ExtensionsListComponent } from './components/extensions-list/extensions-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, TabsComponent],
+  imports: [RouterOutlet, HeaderComponent, TabsComponent, ExtensionsListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
