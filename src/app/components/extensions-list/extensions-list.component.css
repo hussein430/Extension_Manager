@@ -1,0 +1,10 @@
+.extension-card {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+  transition: background-color 0.3s;
+}
+
+:host-context(.dark) .extension-card {
+  background-color: var(--neutral-800);
+  color: var(--neutral-0);
+}

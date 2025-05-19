@@ -1,0 +1,14 @@
+.tab-btn{
+    background: var(--header-bg);
+}
+
+.tab-btn:hover{
+    background: var(--color-red-400);
+    color: white;
+}
+
+
+.dark .tab-btn:hover{
+    color: black;
+}
+
