@@ -12,3 +12,8 @@
     color: black;
 }
 
+.active{
+    background-color: var(--color-red-400);
+    color: white;
+}
+

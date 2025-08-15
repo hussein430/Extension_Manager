@@ -4,7 +4,9 @@
     <h2 class="text-2xl font-bold mt-8 title" style="color: var(--title-color)">
       Extensions List
     </h2>
-    <app-tabs></app-tabs>
+    <app-tabs (tabChanged)="getTab($event)"></app-tabs>
   </div>
-  <app-extensions-list></app-extensions-list>
+  <div class="mb-3">
+    <app-extensions-list [filterBy]="selectedTab"></app-extensions-list>
+  </div>
 </div>

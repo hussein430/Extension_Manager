@@ -8,7 +8,11 @@ import { ExtensionsListComponent } from './components/extensions-list/extensions
   selector: 'app-root',
   imports: [HeaderComponent, TabsComponent, ExtensionsListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
+  selectedTab = 'All';
+  getTab(tab: string) {
+    this.selectedTab = tab;
+  }
 }
