@@ -1,11 +1,10 @@
 <div class="tabs flex">
-<button
-  *ngFor="let tab of tabs"
-  (click)="selectTab(tab)"
-  [class.active]="tab === activeTab"
-  class="text-sm p-2.5 mx-1.5 border cursor-pointer rounded-xl transition-all tab-btn"
->
-  {{ tab }}
-</button>
-
+  <button
+    *ngFor="let tab of tabs"
+    (click)="selectTab(tab)"
+    [class.active]="tab === activeTab"
+    class="text-sm p-2.5 mx-1.5 border cursor-pointer rounded-xl transition-all tab-btn"
+  >
+    {{ tab }}
+  </button>
 </div>
